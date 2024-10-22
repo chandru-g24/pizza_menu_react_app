@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Pizza Menu App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React application that displays a dynamic pizza menu. The app showcases a list of pizzas with details like name, ingredients, price, and image, along with a footer that indicates whether the pizzeria is currently open based on the time. It demonstrates React components, props, conditional rendering, and basic state management.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Dynamic Menu**: Displays a list of pizzas with their ingredients, price, and photo.
+- **Sold-Out Handling**: Conditionally renders "SOLD OUT" for unavailable pizzas.
+- **Operational Hours**: Shows whether the pizzeria is open based on the current time and allows users to place an order during open hours.
+- **Component-Based Structure**: Demonstrates the use of React components, props, and conditional rendering.
 
-### `npm start`
+## Project Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/pizza-menu-app.git
+   cd pizza-menu-app
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm test`
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Open the app in your browser:
+   ```
+   http://localhost:3000
+   ```
 
-### `npm run build`
+## Components
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **App**: Main container component that renders the header, menu, and footer.
+- **Header**: Displays the app title.
+- **Menu**: Shows the list of pizzas and handles conditional rendering based on the menu data.
+- **Pizza**: Renders individual pizza details and handles sold-out state.
+- **Footer**: Displays whether the pizzeria is open based on current time.
+- **Order**: Component that shows the order button and opening hours when the pizzeria is open.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Data
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The pizza data is stored in an array called `pizzaData` in the following structure:
 
-### `npm run eject`
+```javascript
+const pizzaData = [
+  {
+    name: "Focaccia",
+    ingredients: "Bread with italian olive oil and rosemary",
+    price: 6,
+    photoName: "pizzas/focaccia.jpg",
+    soldOut: false,
+  },
+  // Additional pizza objects
+];
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Customization
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Add or Modify Pizzas**: You can add or modify pizzas by editing the `pizzaData` array in the code.
+- **Operating Hours**: Adjust the `openHour` and `closeHour` constants in the `Footer` component to change the pizzeria's operational hours.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Technologies Used
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React (with ReactDOM v18)
+- JSX for component structure
+- CSS for styling
