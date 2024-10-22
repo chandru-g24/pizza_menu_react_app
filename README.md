@@ -13,7 +13,7 @@ A simple React application that displays a dynamic pizza menu. The app showcases
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/pizza-menu-app.git
+   git clone https://github.com/chandru-g24/pizza-menu-app.git
    cd pizza-menu-app
    ```
 
